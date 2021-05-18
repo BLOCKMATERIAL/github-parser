@@ -1,0 +1,36 @@
+@import 'variables';
+
+
+.area{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 30px 0px;
+
+  .Search {
+    input {
+      width: 250px;
+      height: 40px;
+      margin: 0 auto;
+      margin-top:10px;
+      border:solid 1px $gray-line;
+      border-radius: 30px;
+      text-align: inherit;
+      padding-left: 20px;
+    }
+  }
+
+  .Cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width:80%;
+    div {
+      background-color: $gray-line;
+      border-radius: 10px;
+      padding: 0px 20px;
+    }
+  }
+
+}
+
