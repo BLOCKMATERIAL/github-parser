@@ -1,14 +1,10 @@
 @import 'variables';
 
 .header {
-  border-bottom: 1px solid $black;
-  padding: 40px 0;
+  border-bottom: 1px solid $gold;
+  padding: 30px 0;
 
-  .container {
-
-  }
-
-  &__logo {
+  &-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,13 +13,10 @@
     }
 
     h1 {
-      color: #181818;
+      color: $gold;
       font-size: 24px;
       font-weight: inherit;
     }
 
-    p {
-      color: #7b7b7b;
-    }
   }
 }
