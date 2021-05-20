@@ -42,30 +42,50 @@
   }
 
   .cards {
+    //display: grid;
+    //grid-template-columns: repeat(2, 1fr);
+    //grid-template-columns: repeat(2, minmax(100px, 1fr));
+    //gap: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-gap: 10px;
     @include media("<=phone") {
-      display: flex;
-      flex-direction: column;
-      grid-template-columns: none;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(1, minmax(50px, 1fr));
+      grid-gap: 10px;
+      //display: flex;
+      //flex-direction: column;
+      //grid-template-columns: none;
     }
     @include media(">phone", "<=425px") {
-      display: flex;
-      flex-direction: column;
-      grid-template-columns: none;
+      //display: flex;
+      //flex-direction: column;
+      //grid-template-columns: none;
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(1, minmax(50px, 1fr));
+      grid-gap: 10px;
     }
 
     div {
       background-color: $white;
       border-radius: 10px;
-      padding: 10px;
+      //padding: 10px;
       margin: 10px;
       span {
       font-weight: bold;
       }
       h2{
         color: $black;
+        word-wrap: break-word;
+        //text-overflow: ellipsis;
+        //white-space: nowrap;
+        //overflow: hidden;
+      }
+      a {
+        text-decoration: none;
       }
     }
 
