@@ -1,47 +1,83 @@
 @import 'variables';
-
+@import "breakpoints";
 
 .sub-content {
   display: flex;
   margin: 30px 0px;
 
+  @include media("<=phone") {
+    flex-direction: column;
+  }
+  @include media(">phone", "<=425px") {
+    flex-direction: column;
+    align-items: center
+  }
   .search-content {
     margin-right: 30px;
-    input {
-      width: 250px;
-      height: 40px;
-      margin: 0 auto;
-      border:solid 1px $white;
-      border-radius: 30px;
-      text-align: inherit;
-      padding-left: 20px;
-      &:focus {
-        outline: none;
-      }
-
+    display: flex;
+    flex-direction: column;
+    @include media("<=phone") {
+      margin-right: 0;
     }
-    h2,p{
-         color: $white;
-
-       }
+    @include media(">phone", "<=425px") {
+      margin-right: 0;
+    }
   }
 
-  .cards{
+  input {
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    border: solid 1px $white;
+    border-radius: 30px;
+    text-align: inherit;
+    padding-left: 20px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  h2, p {
+    color: $white;
+  }
+
+  .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    @include media("<=phone") {
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: none;
+    }
+    @include media(">phone", "<=425px") {
+      display: flex;
+      flex-direction: column;
+      grid-template-columns: none;
+    }
 
     div {
       background-color: $white;
       border-radius: 10px;
       padding: 10px;
       margin: 10px;
-    }
-    span {
+      span {
       font-weight: bold;
+      }
+      h2{
+        color: $black;
+      }
     }
+
+
+
   }
 
-
 }
+
+
+
+
+
+
 
