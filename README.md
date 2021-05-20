@@ -2,7 +2,7 @@
 
 github-parser
 
-This is a singe-page React.JS application that outputs a list of repositories and organizations by search query.
+This is a singe-page React.JS application that outputs a list of repositories and organizations by search term.
 api.github.com was used to get the data.
 
 ## Project Status
