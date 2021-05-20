@@ -88,9 +88,12 @@ function Home() {
 
             <div className="cards">
                 {projects.map((project, index) => (
+
                     <div key={index} className="card">
                         <div className="tittle-card">
-                            <h2>{project.name}</h2>
+                            <a href={project.html_url} target="_blank">
+                                <h2>{project.name}</h2>
+                            </a>
                         </div>
 
                         <div className="language-card">
@@ -102,6 +105,7 @@ function Home() {
                         </div>
 
                     </div>
+
                 ))}
 
             </div>
