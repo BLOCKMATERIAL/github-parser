@@ -8,6 +8,13 @@ api.github.com was used to get the data.
 ## Project Status
 
 The project is now complete.
+
+
+## Deploy
+
+[The application is deployed on firebase.](https://github-parser-613f5.web.app/)
+
+
 ## Installation and Setup Instructions
 
 
